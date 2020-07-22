@@ -142,6 +142,9 @@ public:
     bool showHidden() const;
     void setShowHidden(bool showHidden);
 
+protected:
+    bool eventFilter(QObject* watched, QEvent* event) override;
+
 private Q_SLOTS:
     void onCurrentRowChanged(const QModelIndex &current, const QModelIndex& /*previous*/);
     void onSelectionChanged(const QItemSelection& /*selected*/, const QItemSelection& /*deselected*/);
